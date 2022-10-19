@@ -7,6 +7,7 @@ public class EnemyController2 : MonoBehaviour
     public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
+    public bool broken = true;
 
     Rigidbody2D rigidbody2d;
     float timer;
@@ -21,8 +22,9 @@ public class EnemyController2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if (!broken) {return;}
         timer -= Time.deltaTime;
 
         if (timer < 0) {
@@ -51,5 +53,11 @@ public class EnemyController2 : MonoBehaviour
         if (player != null) {
             player.ChangeHealth(-1);
         }
+    }
+
+    public void Fix(){
+        broken = false;
+        rigidbody2d.simulated = false;
+        animator.SetTrigger("Fixed");
     }
 }

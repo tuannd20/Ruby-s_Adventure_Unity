@@ -4712,18 +4712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 446538191874385494, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 446538191874385494, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
-      propertyPath: vertical
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 446538191874385494, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
-      propertyPath: changeTime
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6744788118744703873, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
       propertyPath: m_Name
       value: robot (1)
@@ -5378,7 +5366,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 446538191874385494, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
       propertyPath: speed
-      value: -4
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 446538191874385494, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
+      propertyPath: vertical
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6744788118744703873, guid: 63c3c4d8d74c6834dbb5c8a155b95f3f, type: 3}
       propertyPath: m_Name
