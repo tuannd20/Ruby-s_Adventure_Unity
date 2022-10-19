@@ -62,7 +62,7 @@ public class RubyController : MonoBehaviour
     }
 
     void FixedUpdate() {
-        Vector2 position = transform.position;
+        Vector2 position = rigidbody2d.position;;
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
 
@@ -71,6 +71,7 @@ public class RubyController : MonoBehaviour
 
     public void ChangeHealth(int amount) {
         if (amount < 0) {
+            animator.SetTrigger("Hit");
             if (isInvincible)
                 return;
 

@@ -11,4 +11,12 @@ public class DamageZone : MonoBehaviour
             ruby.ChangeHealth(-1);
         }
     }
+
+    void OnTriggerStay2D(Collider2D other) {
+        RubyController ruby = other.GetComponent<RubyController>();
+
+        if (ruby != null) {
+            ruby.ChangeHealth(-1);
+        }
+    }
 }
