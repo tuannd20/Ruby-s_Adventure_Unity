@@ -101,6 +101,8 @@ MonoBehaviour:
   speed: 3
   maxHealth: 5
   timeInvincible: 2
+  throwCogClip: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
+  takeDamageClip: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
   projectilePrefab: {fileID: 5023016361808891629, guid: 63f39e7bcae10374fa70a65b1c040a79, type: 3}
 --- !u!50 &-2131484352096714159
 Rigidbody2D:
