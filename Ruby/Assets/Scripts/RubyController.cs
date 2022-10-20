@@ -65,6 +65,24 @@ public class RubyController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C)) {
             Launch();
         }
+
+        if (Input.GetKeyDown(KeyCode.X)) {
+            RaycastHit2D hit = Physics2D.Raycast(
+                rigidbody2d.position + Vector2.up * 0.2f, 
+                lookDirection, 
+                1.0f, 
+                LayerMask.GetMask("NPC")
+            );
+
+            if (hit.collider != null) {
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+
+                NonPlayerCharacter playerCharacter = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (playerCharacter != null) {
+                    playerCharacter.DisplayDialog();
+                }
+            }
+        }
     }
 
     void FixedUpdate() {
@@ -87,6 +105,8 @@ public class RubyController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 
     void Launch() {
